@@ -16,9 +16,9 @@ namespace LegoProjectApi.Controllers
         public CloudinaryController(IConfiguration configuration)
         {
             Configuration = configuration;
-            Cloudinary_name = Environment.GetEnvironmentVariable("NG_APP_CLOUD_NAME") ?? String.Empty;
-            Cloudinary_key = Environment.GetEnvironmentVariable("NG_APP_CLOUD_KEY") ?? String.Empty;
-            Cloudinary_secret = Environment.GetEnvironmentVariable("NG_APP_CLOUD_SECRET") ?? String.Empty;
+            Cloudinary_name = Environment.GetEnvironmentVariable("CLOUD_NAME") ?? String.Empty;
+            Cloudinary_key = Environment.GetEnvironmentVariable("CLOUD_KEY") ?? String.Empty;
+            Cloudinary_secret = Environment.GetEnvironmentVariable("CLOUD_SECRET") ?? String.Empty;
             Cloudinary_URL = "cloudinary://" + Cloudinary_key + ":" + Cloudinary_secret + "@" + Cloudinary_name;
         }
 
